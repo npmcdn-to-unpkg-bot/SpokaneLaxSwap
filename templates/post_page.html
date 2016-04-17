@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="postpage">
+	<img src='/static/post_images/{{posting.picture}}' alt="post image" class='pic'>
+	<div id="title">
+		<h1>
+			{{ posting.title }} 
+			<span style='color: green;'>${{posting.price}}</span>
+		</h1>
+	</div>
+	<p>
+		{{ posting.description }}
+	</p>
+	<br>
+		Contact:<br>
+		<a href="mailto:{{posting.user_id}}">{{posting.user_id}}</a>
+	<br>
+	<br>
+	<span class='options'>
+		<a href='/postings'>Go Back</a>
+	</span>
+	<br>
+	<br>
+	<br>
+</div>
+
+{% endblock %}

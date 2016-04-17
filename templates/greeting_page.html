@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div id='title'>
+	<h1 >Welcome!</h1> 
+</div>
+<div class='content'>
+	<div class='info'>
+		<p>
+			Spokane Lax Swap is a free-to-use website dedicated to the lacrosse community in the Spokane/CDA area. You can post ads to sell gear, apparel, stringing services or even coordinate pickup games and shooting sessions. Please keep in mind that your email will be publicly shown on your posts in order for other users to contact you. You will not be able to post unless you are logged in.
+		</p>
+		<p>
+			Remember: Stay cautious and always meet in public!
+		</p>
+		<p>
+			You can find serialized JSON of all the posts at <a href="/postings/json">/postings/json</a>
+		</p>
+		<p>
+			If you want the JSON for a specific item, use /postings/json/(post_id_#_here)
+		</p>
+	</div>
+</div>
+
+{% endblock %}

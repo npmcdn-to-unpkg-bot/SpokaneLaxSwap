@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<div id="title">
+	<h1>{{ title }}</h1>
+</div>
+<div class="content">
+	{% for post in posts %}
+		<div class="post">
+			<a href={{url_for('showPost', post_id=post.id)}}>
+				<img src='../static/post_images/{{post.picture}}' alt="post image" 
+				class='post_photo'>
+			</a>
+			<div class='postinfo'>
+				<div class='posttitle'>
+					<a href={{url_for('showPost', post_id=post.id)}}> 
+						{{ post.title }} 
+					</a>
+				</div>
+
+				<div class='postbottom'>
+					<div class='price'> $ {{ post.price }} </div>
+					{{ post.description }}
+					<br>
+					{% if post.user_id == session_email %}
+						<a href={{url_for('editPost', post_id=post.id)}} class='fa fa-pencil' style='color:red;'></a> |
+						<a href={{url_for('deletePost', post_id=post.id)}} class='fa fa-times' style='color:red;'></a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+
+	{% else %}
+		<div class="empty">
+			<br> <br>
+			There is currently nothing posted. Would you like to <a href='/postings/create'> create a post</a>?
+		</div>
+	{% endfor %}
+</div>
+
+{% endblock %}

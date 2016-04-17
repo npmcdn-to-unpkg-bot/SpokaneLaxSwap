@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<div id="title"> 
+	<h1> Edit Post </h1>
+</div>
+<div class='content'>
+	<div class='fields'>
+		<br>
+		<form method='POST' enctype='multipart/form-data'>
+		<span class='spacebetween'>
+			<input type="text" class='box' name="title" placeholder="Title" value="{{posting.title}}">
+			<input type="text" class='box' name="price" placeholder="Price" size="5" value="{{posting.price}}">
+		</span>
+			<br>
+			<textarea class='box' rows='5' cols='50' name="description" placeholder="Description (max 400 chars)">{{posting.description}}</textarea><br>
+			Upload Picture: <input type="file" name="pic" accept="image/*"><br>
+			Category: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<select name='category'>
+	  				<option value="Stick">stick</option>
+	  				<option value="Protection">protection</option>
+	  				<option value="Stringing">stringing</option>
+	  				<option value="Apparel">apparel</option>
+	  				<option value="Misc">misc</option> 
+				</select>
+			<br>
+			<span style='color: red; font-size: 26px;'>{{error}}</span>
+			<br>
+			<input type="submit" class="button">
+			<span class='options'> <a href='/postings'> cancel </a> </span>
+		</form>
+		<br> <br>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Spokane Lax Swap</title>
+	<!-- CSS -->
+	<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<!-- Masonry -->
+	<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+	<!-- Google Log in -->
+	<script src="//apis.google.com/js/platform.js?onload=start"> </script>
+</head>
+<body>
+	<!-- JavaScript dialog box -->
+	<div id='dialogoverlay'></div>
+		<div id='dialogbox'>
+			<div>
+				<div id='dialogboxcontent'></div>
+				<div id='dialogboxbuttons'></div>
+			</div>
+		</div>
+
+		<header>
+			<div class="mask">
+				<div id='sls'>
+					SPOKANE LAX SWAP
+				</div>
+				<div class="navbar">
+					<div class="links">
+						<a href="/">
+							<span class="fa-stack fa-lg">
+								<i class="fa fa-home fa-stack-1x"></i>
+								<i class="fa fa-circle-thin fa-stack-2x"></i> 
+							</span>
+						</a>
+						<div class='dropdown'>
+							<button class='dropbutton'>
+								<a href="/postings">
+									<span class="fa-stack fa-lg">
+										<i  class='fa fa-file-text fa-stack-1x'></i>
+										<i class="fa fa-circle-thin fa-stack-2x"></i>
+									</span>
+								</a>
+							</button>
+							<div class='dropdown-content'>
+								<a href='/postings'>all posts</a>
+								<a href='/postings/Stick'>stick</a>
+								<a href='/postings/Protection'>protection</a>
+								<a href='/postings/Stringing'>stringing</a>
+								<a href='/postings/Apparel'>apparel</a>
+								<a href='/postings/Misc'>misc</a>
+							</div>
+						</div>
+						<a href="/about">
+							<span class="fa-stack fa-lg">
+								<i  class='fa fa-question fa-stack-1x'></i>
+								<i class="fa fa-circle-thin fa-stack-2x"></i>
+							</span>
+						</a>						
+					</div>
+					<div class="user">
+						{% if session_email != '' %}
+							<div class='dropdown'>
+							<button class="dropbutton"> 
+									{{ session_email }} 
+									<i class="fa fa-caret-down"></i>
+							</button>
+								<div class='dropdown-content'>
+									<a href='/postings/create'>create a post</a> 
+									<a href='/postings/myposts'>my posts</a>
+									<a href="/gdisconnect">log out</a>
+								</div>
+							</div>
+						{% else %}
+							<a href="/login">
+								Sign In
+							</a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</header>
+
+			{% block content %}
+			{% endblock %}
+			
+<script>
+	$(window).on('load', function(){
+		$('.content').masonry({
+	  		// options
+	  		itemSelector: '.post',
+		});
+	});
+</script>
+
+</body>
+</html>
