@@ -15,10 +15,10 @@ main.py - runs the site
 database_setup.py - automatically run through main.py, initalizes the database  
 database_populator.py - populates the database with sample posts, used for demo purposes only  
 client_secrets.json - contains the secret for connecting with google+  
-static(folder) - houses all static files
+templates(folder) - stores html templates
+static(folder) - houses all static files and folders listed below:
   * post_images(folder) - stores all post images  
       * default.jpg - DO NOT DELETE, is the standard image used when user doesnt upload one  
       * postX.jpg - images used in sample posts created using database_populator  
   * site_images(folder) - contain images for the sites artwork  
       * header.jpg - site header image
-templates(folder) - stores html templates
