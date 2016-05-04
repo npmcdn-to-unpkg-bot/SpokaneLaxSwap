@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200);
 body {
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 20px; 
 }
 
@@ -23,7 +23,7 @@ header {
   text-align: center;
   font-size: 60px;
   font-weight: 200;
-  letter-spacing: 10px; 
+  letter-spacing: 10px;
 }
 
 .mask {
@@ -32,7 +32,7 @@ header {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%; 
+  width: 100%;
 }
 
 .navbar {
@@ -44,39 +44,39 @@ header {
   letter-spacing: 2px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; 
+  align-items: flex-end;
 }
 
 .navbar a {
   color: white;
   position: relative;
-  bottom: 10px; 
+  bottom: 10px;
 }
 
 .navbar a:hover {
-  color: #4EAE79; 
+  color: #4eae79;
 }
 
 .links {
-  letter-spacing: 0; 
+  letter-spacing: 0;
 }
 
 /* CONTENT STUFF */
 .middle {
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 #title {
-  text-align: center; 
+  text-align: center;
 }
 
 h1 {
   font-weight: 300;
-  letter-spacing: 1px; 
+  letter-spacing: 1px;
 }
 
 .options {
-  font-size: 26px; 
+  font-size: 26px;
 }
 
 .info {
@@ -84,79 +84,79 @@ h1 {
   margin: 0 auto;
   font-size: 24px;
   padding: 10px;
-  text-align: center; 
+  text-align: center;
 }
 
 /* posts */
 .content {
-  border-top: 1px solid #DCDCDC;
+  border-top: 1px solid #dcdcdc;
   padding: 10px;
   width: inherit;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   margin: 0 auto;
 }
 
 .empty {
   width: 100%;
   text-align: center;
-  font-size: 24px; 
+  font-size: 24px;
 }
 
 .post {
   max-width: 200px;
   word-wrap: break-word;
   margin: 10px;
-  border: 1px solid #DCDCDC; 
+  border: 1px solid #dcdcdc;
 }
 
 .post_photo {
-  max-width: 200px; 
+  max-width: 200px;
 }
 
 .postinfo {
-  max-width: 200px; 
+  max-width: 200px;
 }
 
 .posttitle {
   text-align: center;
   font-size: 30px;
-  padding: 10px; 
+  padding: 10px;
 }
 
 .postbottom {
   max-width: inherit;
   padding: 10px;
-  background-color: #F9F9F9;
-  border-top: 1px solid #DCDCDC;
-  text-align: center; 
+  background-color: #f9f9f9;
+  border-top: 1px solid #dcdcdc;
+  text-align: center;
 }
 
 .price {
   font-size: 28px;
-  color: green; 
+  color: green;
 }
 
 a {
-  color: #4EAE79;
-  text-decoration: none; 
+  color: #4eae79;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #4ECC79; 
+  color: #4ecc79;
 }
 
 /* Post Page */
 .postpage img {
   max-width: 500px;
   margin: 20px;
-  text-align: center; 
+  text-align: center;
 }
 
 .postpage {
   width: 100%;
-  text-align: center; 
+  text-align: center;
 }
 
 .postpage p {
@@ -164,12 +164,12 @@ a:hover {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  word-wrap: break-word; 
+  word-wrap: break-word;
 }
 
 /* Custom Button */
 .button {
-  background-color: #4EAE79;
+  background-color: #4eae79;
   color: white;
   border: 3px solid white;
   padding: 8px;
@@ -178,11 +178,11 @@ a:hover {
   border-radius: 10px;
   text-transform: lowercase;
   cursor: pointer;
-  cursor: hand; 
+  cursor: hand;
 }
 
 .button:hover {
-  background-color: #4ECC79; 
+  background-color: #4ecc79;
 }
 
 /* Dropdown Button */
@@ -194,16 +194,16 @@ a:hover {
   font-size: 26px;
   border: none;
   cursor: pointer;
-  letter-spacing: inherit; 
+  letter-spacing: inherit;
 }
 
 .dropdown:hover {
-  color: #4EAE79; 
+  color: #4eae79;
 }
 
 .dropdown {
   position: relative;
-  display: inline-block; 
+  display: inline-block;
 }
 
 /* (Hidden by Default) */
@@ -215,7 +215,7 @@ a:hover {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 5; 
+  z-index: 5;
 }
 
 /* Links inside the dropdown */
@@ -223,46 +223,46 @@ a:hover {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
-  display: block; 
+  display: block;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block; 
+  display: block;
 }
 
 /* CREATE POST */
 .fields {
   max-width: 800px;
   font-size: 26;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .fields .box {
   padding: 10px;
-  border: 3px solid #DCDCDC;
+  border: 3px solid #dcdcdc;
   font-size: 26px;
-  font-weight: 300; 
+  font-weight: 300;
 }
 
 .spacebetween {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 select {
-  border: 1px solid #DCDCDC; 
+  border: 1px solid #dcdcdc;
 }
 
 /* Dialog Box Stuff */
 #dialogoverlay {
   display: none;
-  opacity: .7;
+  opacity: 0.7;
   position: fixed;
   top: 0px;
   left: 0px;
   background-color: white;
   width: 100%;
-  z-index: 10; 
+  z-index: 10;
 }
 
 #dialogbox {
@@ -271,10 +271,10 @@ select {
   background: black;
   border-radius: 4px;
   width: 550px;
-  z-index: 10; 
+  z-index: 10;
 }
 
 #dialogbox > div {
-  background: #FFF;
-  margin: 8px; 
+  background: #fff;
+  margin: 8px;
 }
